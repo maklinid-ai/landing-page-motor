@@ -162,7 +162,8 @@ export function Footer() {
 
         <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-6 sm:flex-row">
           <p className="text-xs text-white/40">
-            &copy; {new Date().getFullYear()} {site.name}. All rights reserved.
+            &copy; <span suppressHydrationWarning>{new Date().getFullYear()}</span>{" "}
+            {site.name}. All rights reserved.
           </p>
           <p className="text-xs text-white/40">
             Build • Operate • Grow

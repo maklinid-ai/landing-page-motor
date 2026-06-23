@@ -1,0 +1,479 @@
+     1→     1→## Error Type
+     2→     2→Console Error
+     3→     3→
+     4→     4→## Error Message
+     5→     5→A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+     6→     6→
+     7→     7→- A server/client branch `if (typeof window !== 'undefined')`.
+     8→     8→- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+     9→     9→- Date formatting in a user's locale which doesn't match the server.
+    10→    10→- External changing data without sending a snapshot of it along with the HTML.
+    11→    11→- Invalid HTML tag nesting.
+    12→    12→
+    13→    13→It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+    14→    14→
+    15→    15→https://react.dev/link/hydration-mismatch
+    16→    16→
+    17→    17→  ...
+    18→    18→    <LoadingBoundary name="/" loading={null}>
+    19→    19→      <HTTPAccessFallbackBoundary notFound={<SegmentViewNode>} forbidden={undefined} unauthorized={undefined}>
+    20→    20→        <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<SegmentViewNode>} forbidden={undefined} ...>
+    21→    21→          <RedirectBoundary>
+    22→    22→            <RedirectErrorBoundary router={{...}}>
+    23→    23→              <InnerLayoutRouter url="/" tree={[...]} params={{}} cacheNode={{rsc:<Fragment>, ...}} segmentPath={[...]} ...>
+    24→    24→                <SegmentViewNode type="page" pagePath="page.tsx">
+    25→    25→                  <SegmentTrieNode>
+    26→    26→                  <Home>
+    27→    27→                    <div className="flex min-h...">
+    28→    28→                      <Navbar>
+    29→    29→                        <header className="fixed inse...">
+    30→    30→                          <motion.div initial={{y:-24,opacity:0}} animate={{y:0,opacity:1}} ...>
+    31→    31→                            <div className="mx-auto fl..." style={{opacity:0, ...}} ...>
+    32→    32→                              <div>
+    33→    33→                              <a>
+    34→    34→                              <nav>
+    35→    35→                              <div>
+    36→    36→                              <button
+    37→    37→                                type="button"
+    38→    38→                                aria-label="Buka menu"
+    39→    39→                                onClick={function onClick}
+    40→    40→                                className="inline-flex size-11 items-center justify-center rounded-xl border border-bl..."
+    41→    41→-                               fdprocessedid="w7okj"
+    42→    42→                              >
+    43→    43→                          ...
+    44→    44→                      <main className="flex-1">
+    45→    45→                        ...
+    46→    46→                          <motion.div initial={{opacity:0,y:20}} animate={{opacity:1,y:0}} ...>
+    47→    47→                            <div className="mt-8 flex ..." style={{opacity:0, ...}} ...>
+    48→    48→                              <ConsultCta size="lg" className="w-full sm:...">
+    49→    49→                                <button
+    50→    50→                                  type="button"
+    51→    51→                                  onClick={function onClick}
+    52→    52→                                  className="group relative inline-flex items-center justify-center gap-2 overflow-hid..."
+    53→    53→-                                 fdprocessedid="zrd0c"
+    54→    54→                                >
+    55→    55→                              ...
+    56→    56→                        <Marquee>
+    57→    57→                        <ProblemSection>
+    58→    58→                        <MistakesSection>
+    59→    59→                        <OpportunitySection>
+    60→    60→                        ...
+    61→    61→                          <motion.div className="mt-12 flex..." variants={{hidden:{...}, ...}} initial="hidden" ...>
+    62→    62→                            <div className="mt-12 flex..." style={{opacity:0, ...}} ...>
+    63→    63→                              <ConsultCta size="lg">
+    64→    64→                                <button
+    65→    65→                                  type="button"
+    66→    66→                                  onClick={function onClick}
+    67→    67→                                  className="group relative inline-flex items-center justify-center gap-2 overflow-hid..."
+    68→    68→-                                 fdprocessedid="7myuj"
+    69→    69→                                >
+    70→    70→                        <WhyMaklinSection>
+    71→    71→                        ...
+    72→    72→                          <div className="mx-auto ma...">
+    73→    73→                            <SectionHeading>
+    74→    74→                            ...
+    75→    75→                              <div className="mt-10 flex..." style={{opacity:0, ...}} ...>
+    76→    76→                                <div className="inline-fle...">
+    77→    77→                                  <button
+    78→    78→                                    type="button"
+    79→    79→                                    onClick={function onClick}
+    80→    80→                                    className="relative rounded-full px-5 py-2.5 text-sm font-bold transition-colors t..."
+    81→    81→-                                   fdprocessedid="s3hwh"
+    82→    82→                                  >
+    83→    83→                                  <button
+    84→    84→                                    type="button"
+    85→    85→                                    onClick={function onClick}
+    86→    86→                                    className="relative rounded-full px-5 py-2.5 text-sm font-bold transition-colors t..."
+    87→    87→-                                   fdprocessedid="z61ixm"
+    88→    88→                                  >
+    89→    89→                                  <button
+    90→    90→                                    type="button"
+    91→    91→                                    onClick={function onClick}
+    92→    92→                                    className="relative rounded-full px-5 py-2.5 text-sm font-bold transition-colors t..."
+    93→    93→-                                   fdprocessedid="z2yytb"
+    94→    94→                                  >
+    95→    95→                            ...
+    96→    96→                              <div className="rounded-3x..." style={{opacity:0, ...}} ...>
+    97→    97→                                <div>
+    98→    98→                                <div>
+    99→    99→                                <ConsultCta size="lg" pkg="standard" className="mt-7 w-full">
+   100→   100→                                  <button
+   101→   101→                                    type="button"
+   102→   102→                                    onClick={function onClick}
+   103→   103→                                    className="group relative inline-flex items-center justify-center gap-2 overflow-h..."
+   104→   104→-                                   fdprocessedid="rwrmae"
+   105→   105→                                  >
+   106→   106→                            ...
+   107→   107→                        ...
+   108→   108→                          <div className="mx-auto ma...">
+   109→   109→                            <SectionHeading>
+   110→   110→                            ...
+   111→   111→                              <div className="mt-14 grid..." style={{}} ref={function useMotionRef.useCallback}>
+   112→   112→                                ...
+   113→   113→                                  <div className="h-full" style={{opacity:0, ...}} ...>
+   114→   114→                                    <div className="group rela...">
+   115→   115→                                      <div>
+   116→   116→                                      <ul>
+   117→   117→                                      <button
+   118→   118→                                        type="button"
+   119→   119→                                        onClick={function onClick}
+   120→   120→                                        className="group/btn relative mt-8 inline-flex h-12 w-full items-center justif..."
+   121→   121→-                                       fdprocessedid="macxyj"
+   122→   122→                                      >
+   123→   123→                                ...
+   124→   124→                                  <div className="h-full" style={{opacity:0, ...}} ...>
+   125→   125→                                    <div className="group rela...">
+   126→   126→                                      <div>
+   127→   127→                                      <div>
+   128→   128→                                      <div>
+   129→   129→                                      <ul>
+   130→   130→                                      <button
+   131→   131→                                        type="button"
+   132→   132→                                        onClick={function onClick}
+   133→   133→                                        className="group/btn relative mt-8 inline-flex h-12 w-full items-center justif..."
+   134→   134→-                                       fdprocessedid="v3mu6o"
+   135→   135→                                      >
+   136→   136→                                ...
+   137→   137→                                  <div className="h-full" style={{opacity:0, ...}} ...>
+   138→   138→                                    <div className="group rela...">
+   139→   139→                                      <div>
+   140→   140→                                      <ul>
+   141→   141→                                      <button
+   142→   142→                                        type="button"
+   143→   143→                                        onClick={function onClick}
+   144→   144→                                        className="group/btn relative mt-8 inline-flex h-12 w-full items-center justif..."
+   145→   145→-                                       fdprocessedid="k48vyq"
+   146→   146→                                      >
+   147→   147→                            <motion.p initial={{opacity:0}} whileInView={{opacity:1}} viewport={{once:true}} ...>
+   148→   148→                              <p className="mt-10 text..." style={{opacity:0}} ref={function useMotionRef.useCallback}>
+   149→   149→                                <span>
+   150→   150→                                <button
+   151→   151→                                  type="button"
+   152→   152→                                  onClick={function onClick}
+   153→   153→                                  className="font-semibold text-ink underline underline-offset-4 hover:text-brand"
+   154→   154→-                                 fdprocessedid="wfqguf"
+   155→   155→                                >
+   156→   156→+                                 Konsultasi dengan kami
+   157→   157→                                ...
+   158→   158→                        ...
+   159→   159→                          <motion.form initial={{opacity:0}} animate={{opacity:1}} exit={{opacity:0}} ...>
+   160→   160→                            <form onSubmit={function handleSubmit} className="relative s..." style={{opacity:0}} ...>
+   161→   161→                              <div>
+   162→   162→                              <FormField label="Nama" htmlFor="inline-name" required={true}>
+   163→   163→                                <div className="space-y-2">
+   164→   164→                                  <Label>
+   165→   165→                                  <Input id="inline-name" placeholder="Nama lengk..." value="" ...>
+   166→   166→                                    <input
+   167→   167→                                      type={undefined}
+   168→   168→                                      data-slot="input"
+   169→   169→                                      className="file:text-foreground placeholder:text-muted-foreground selection:bg-p..."
+   170→   170→                                      id="inline-name"
+   171→   171→                                      placeholder="Nama lengkap Anda"
+   172→   172→                                      value=""
+   173→   173→                                      onChange={function onChange}
+   174→   174→                                      autoComplete="name"
+   175→   175→-                                     fdprocessedid="l9q0mq"
+   176→   176→                                    >
+   177→   177→                              <FormField label="Nomor What..." htmlFor="inline-wa" required={true}>
+   178→   178→                                <div className="space-y-2">
+   179→   179→                                  <Label>
+   180→   180→                                  <Input id="inline-wa" inputMode="tel" placeholder="0812xxxxxxx" value="" ...>
+   181→   181→                                    <input
+   182→   182→                                      type={undefined}
+   183→   183→                                      data-slot="input"
+   184→   184→                                      className="file:text-foreground placeholder:text-muted-foreground selection:bg-p..."
+   185→   185→                                      id="inline-wa"
+   186→   186→                                      inputMode="tel"
+   187→   187→                                      placeholder="0812xxxxxxx"
+   188→   188→                                      value=""
+   189→   189→                                      onChange={function onChange}
+   190→   190→                                      autoComplete="tel"
+   191→   191→-                                     fdprocessedid="7gcna"
+   192→   192→                                    >
+   193→   193→                              <FormField label="Kota" htmlFor="inline-city" required={true}>
+   194→   194→                                <div className="space-y-2">
+   195→   195→                                  <Label>
+   196→   196→                                  <Input id="inline-city" placeholder="cth: Jakar..." value="" ...>
+   197→   197→                                    <input
+   198→   198→                                      type={undefined}
+   199→   199→                                      data-slot="input"
+   200→   200→                                      className="file:text-foreground placeholder:text-muted-foreground selection:bg-p..."
+   201→   201→                                      id="inline-city"
+   202→   202→                                      placeholder="cth: Jakarta Selatan"
+   203→   203→                                      value=""
+   204→   204→                                      onChange={function onChange}
+   205→   205→-                                     fdprocessedid="pbovjk"
+   206→   206→                                    >
+   207→   207→                              <FormField>
+   208→   208→                              ...
+   209→   209→                                <Primitive.div.Slot ref={function}>
+   210→   210→                                  <Primitive.div.SlotClone ref={function}>
+   211→   211→                                    <Primitive.button type="button" role="combobox" aria-controls="radix-_R_j..." ...>
+   212→   212→                                      <button
+   213→   213→                                        type="button"
+   214→   214→                                        role="combobox"
+   215→   215→                                        aria-controls="radix-_R_jblaiindlb_"
+   216→   216→                                        aria-expanded={false}
+   217→   217→                                        aria-required={undefined}
+   218→   218→                                        aria-autocomplete="none"
+   219→   219→                                        dir="ltr"
+   220→   220→                                        data-state="closed"
+   221→   221→                                        disabled={false}
+   222→   222→                                        data-disabled={undefined}
+   223→   223→                                        data-placeholder=""
+   224→   224→                                        data-slot="select-trigger"
+   225→   225→                                        data-size="default"
+   226→   226→                                        className={"border-input data-[placeholder]:text-muted-foreground [&_svg:not(..."}
+   227→   227→                                        onClick={function handleEvent}
+   228→   228→                                        onPointerDown={function handleEvent}
+   229→   229→                                        onKeyDown={function handleEvent}
+   230→   230→                                        ref={function}
+   231→   231→-                                       fdprocessedid="g15u6a"
+   232→   232→                                      >
+   233→   233→                              <button
+   234→   234→                                type="submit"
+   235→   235→                                disabled={false}
+   236→   236→                                className="group relative inline-flex h-12 w-full items-center justify-center gap-2 ov..."
+   237→   237→-                               fdprocessedid="1j83ig"
+   238→   238→                              >
+   239→   239→+                               Jadwalkan Konsultasi Gratis
+   240→   240→                              ...
+   241→   241→                        ...
+   242→   242→                          <div className="mx-auto ma...">
+   243→   243→                            <SectionHeading>
+   244→   244→                            ...
+   245→   245→                              <div data-slot="accordion" className="space-y-3" data-orientation="vertical" ...>
+   246→   246→                                ...
+   247→   247→                                  <AccordionCollectionItemSlot.SlotClone data-radix-collection-item="" ref={function}>
+   248→   248→                                    <CollapsibleTrigger aria-disabled={undefined} data-orientation="vertical" ...>
+   249→   249→                                      <Primitive.button type="button" aria-controls="radix-_R_4..." aria-expanded={true} ...>
+   250→   250→                                        <button
+   251→   251→                                          type="button"
+   252→   252→                                          aria-controls="radix-_R_4daqindlb_"
+   253→   253→                                          aria-expanded={true}
+   254→   254→                                          data-state="open"
+   255→   255→                                          data-disabled={undefined}
+   256→   256→                                          disabled={undefined}
+   257→   257→                                          aria-disabled={undefined}
+   258→   258→                                          data-orientation="vertical"
+   259→   259→                                          id="radix-_R_daqindlb_"
+   260→   260→                                          data-slot="accordion-trigger"
+   261→   261→                                          className={"focus-visible:border-ring focus-visible:ring-ring/50 flex flex-..."}
+   262→   262→                                          data-radix-collection-item=""
+   263→   263→                                          onClick={function handleEvent}
+   264→   264→                                          ref={function}
+   265→   265→-                                         fdprocessedid="9f63ik"
+   266→   266→                                        >
+   267→   267→                                ...
+   268→   268→                                  <AccordionCollectionItemSlot.SlotClone data-radix-collection-item="" ref={function}>
+   269→   269→                                    <CollapsibleTrigger aria-disabled={undefined} data-orientation="vertical" ...>
+   270→   270→                                      <Primitive.button type="button" aria-controls="radix-_R_4..." aria-expanded={false} ...>
+   271→   271→                                        <button
+   272→   272→                                          type="button"
+   273→   273→                                          aria-controls="radix-_R_4laqindlb_"
+   274→   274→                                          aria-expanded={false}
+   275→   275→                                          data-state="closed"
+   276→   276→                                          data-disabled={undefined}
+   277→   277→                                          disabled={undefined}
+   278→   278→                                          aria-disabled={undefined}
+   279→   279→                                          data-orientation="vertical"
+   280→   280→                                          id="radix-_R_laqindlb_"
+   281→   281→                                          data-slot="accordion-trigger"
+   282→   282→                                          className={"focus-visible:border-ring focus-visible:ring-ring/50 flex flex-..."}
+   283→   283→                                          data-radix-collection-item=""
+   284→   284→                                          onClick={function handleEvent}
+   285→   285→                                          ref={function}
+   286→   286→-                                         fdprocessedid="4ltzfg"
+   287→   287→                                        >
+   288→   288→                                ...
+   289→   289→                                  <AccordionCollectionItemSlot.SlotClone data-radix-collection-item="" ref={function}>
+   290→   290→                                    <CollapsibleTrigger aria-disabled={undefined} data-orientation="vertical" ...>
+   291→   291→                                      <Primitive.button type="button" aria-controls="radix-_R_4..." aria-expanded={false} ...>
+   292→   292→                                        <button
+   293→   293→                                          type="button"
+   294→   294→                                          aria-controls="radix-_R_4taqindlb_"
+   295→   295→                                          aria-expanded={false}
+   296→   296→                                          data-state="closed"
+   297→   297→                                          data-disabled={undefined}
+   298→   298→                                          disabled={undefined}
+   299→   299→                                          aria-disabled={undefined}
+   300→   300→                                          data-orientation="vertical"
+   301→   301→                                          id="radix-_R_taqindlb_"
+   302→   302→                                          data-slot="accordion-trigger"
+   303→   303→                                          className={"focus-visible:border-ring focus-visible:ring-ring/50 flex flex-..."}
+   304→   304→                                          data-radix-collection-item=""
+   305→   305→                                          onClick={function handleEvent}
+   306→   306→                                          ref={function}
+   307→   307→-                                         fdprocessedid="ntmxh"
+   308→   308→                                        >
+   309→   309→                                ...
+   310→   310→                                  <AccordionCollectionItemSlot.SlotClone data-radix-collection-item="" ref={function}>
+   311→   311→                                    <CollapsibleTrigger aria-disabled={undefined} data-orientation="vertical" ...>
+   312→   312→                                      <Primitive.button type="button" aria-controls="radix-_R_5..." aria-expanded={false} ...>
+   313→   313→                                        <button
+   314→   314→                                          type="button"
+   315→   315→                                          aria-controls="radix-_R_55aqindlb_"
+   316→   316→                                          aria-expanded={false}
+   317→   317→                                          data-state="closed"
+   318→   318→                                          data-disabled={undefined}
+   319→   319→                                          disabled={undefined}
+   320→   320→                                          aria-disabled={undefined}
+   321→   321→                                          data-orientation="vertical"
+   322→   322→                                          id="radix-_R_15aqindlb_"
+   323→   323→                                          data-slot="accordion-trigger"
+   324→   324→                                          className={"focus-visible:border-ring focus-visible:ring-ring/50 flex flex-..."}
+   325→   325→                                          data-radix-collection-item=""
+   326→   326→                                          onClick={function handleEvent}
+   327→   327→                                          ref={function}
+   328→   328→-                                         fdprocessedid="zkrd8"
+   329→   329→                                        >
+   330→   330→                                ...
+   331→   331→                                  <AccordionCollectionItemSlot.SlotClone data-radix-collection-item="" ref={function}>
+   332→   332→                                    <CollapsibleTrigger aria-disabled={undefined} data-orientation="vertical" ...>
+   333→   333→                                      <Primitive.button type="button" aria-controls="radix-_R_5..." aria-expanded={false} ...>
+   334→   334→                                        <button
+   335→   335→                                          type="button"
+   336→   336→                                          aria-controls="radix-_R_5daqindlb_"
+   337→   337→                                          aria-expanded={false}
+   338→   338→                                          data-state="closed"
+   339→   339→                                          data-disabled={undefined}
+   340→   340→                                          disabled={undefined}
+   341→   341→                                          aria-disabled={undefined}
+   342→   342→                                          data-orientation="vertical"
+   343→   343→                                          id="radix-_R_1daqindlb_"
+   344→   344→                                          data-slot="accordion-trigger"
+   345→   345→                                          className={"focus-visible:border-ring focus-visible:ring-ring/50 flex flex-..."}
+   346→   346→                                          data-radix-collection-item=""
+   347→   347→                                          onClick={function handleEvent}
+   348→   348→                                          ref={function}
+   349→   349→-                                         fdprocessedid="ckvc18"
+   350→   350→                                        >
+   351→   351→                                ...
+   352→   352→                                  <AccordionCollectionItemSlot.SlotClone data-radix-collection-item="" ref={function}>
+   353→   353→                                    <CollapsibleTrigger aria-disabled={undefined} data-orientation="vertical" ...>
+   354→   354→                                      <Primitive.button type="button" aria-controls="radix-_R_5..." aria-expanded={false} ...>
+   355→   355→                                        <button
+   356→   356→                                          type="button"
+   357→   357→                                          aria-controls="radix-_R_5laqindlb_"
+   358→   358→                                          aria-expanded={false}
+   359→   359→                                          data-state="closed"
+   360→   360→                                          data-disabled={undefined}
+   361→   361→                                          disabled={undefined}
+   362→   362→                                          aria-disabled={undefined}
+   363→   363→                                          data-orientation="vertical"
+   364→   364→                                          id="radix-_R_1laqindlb_"
+   365→   365→                                          data-slot="accordion-trigger"
+   366→   366→                                          className={"focus-visible:border-ring focus-visible:ring-ring/50 flex flex-..."}
+   367→   367→                                          data-radix-collection-item=""
+   368→   368→                                          onClick={function handleEvent}
+   369→   369→                                          ref={function}
+   370→   370→-                                         fdprocessedid="n1ltal"
+   371→   371→                                        >
+   372→   372→                                ...
+   373→   373→                                  <AccordionCollectionItemSlot.SlotClone data-radix-collection-item="" ref={function}>
+   374→   374→                                    <CollapsibleTrigger aria-disabled={undefined} data-orientation="vertical" ...>
+   375→   375→                                      <Primitive.button type="button" aria-controls="radix-_R_5..." aria-expanded={false} ...>
+   376→   376→                                        <button
+   377→   377→                                          type="button"
+   378→   378→                                          aria-controls="radix-_R_5taqindlb_"
+   379→   379→                                          aria-expanded={false}
+   380→   380→                                          data-state="closed"
+   381→   381→                                          data-disabled={undefined}
+   382→   382→                                          disabled={undefined}
+   383→   383→                                          aria-disabled={undefined}
+   384→   384→                                          data-orientation="vertical"
+   385→   385→                                          id="radix-_R_1taqindlb_"
+   386→   386→                                          data-slot="accordion-trigger"
+   387→   387→                                          className={"focus-visible:border-ring focus-visible:ring-ring/50 flex flex-..."}
+   388→   388→                                          data-radix-collection-item=""
+   389→   389→                                          onClick={function handleEvent}
+   390→   390→                                          ref={function}
+   391→   391→-                                         fdprocessedid="r8fawi"
+   392→   392→                                        >
+   393→   393→                                ...
+   394→   394→                                  <AccordionCollectionItemSlot.SlotClone data-radix-collection-item="" ref={function}>
+   395→   395→                                    <CollapsibleTrigger aria-disabled={undefined} data-orientation="vertical" ...>
+   396→   396→                                      <Primitive.button type="button" aria-controls="radix-_R_6..." aria-expanded={false} ...>
+   397→   397→                                        <button
+   398→   398→                                          type="button"
+   399→   399→                                          aria-controls="radix-_R_65aqindlb_"
+   400→   400→                                          aria-expanded={false}
+   401→   401→                                          data-state="closed"
+   402→   402→                                          data-disabled={undefined}
+   403→   403→                                          disabled={undefined}
+   404→   404→                                          aria-disabled={undefined}
+   405→   405→                                          data-orientation="vertical"
+   406→   406→                                          id="radix-_R_25aqindlb_"
+   407→   407→                                          data-slot="accordion-trigger"
+   408→   408→                                          className={"focus-visible:border-ring focus-visible:ring-ring/50 flex flex-..."}
+   409→   409→                                          data-radix-collection-item=""
+   410→   410→                                          onClick={function handleEvent}
+   411→   411→                                          ref={function}
+   412→   412→-                                         fdprocessedid="nqxwa"
+   413→   413→                                        >
+   414→   414→                                ...
+   415→   415→                                  <AccordionCollectionItemSlot.SlotClone data-radix-collection-item="" ref={function}>
+   416→   416→                                    <CollapsibleTrigger aria-disabled={undefined} data-orientation="vertical" ...>
+   417→   417→                                      <Primitive.button type="button" aria-controls="radix-_R_6..." aria-expanded={false} ...>
+   418→   418→                                        <button
+   419→   419→                                          type="button"
+   420→   420→                                          aria-controls="radix-_R_6daqindlb_"
+   421→   421→                                          aria-expanded={false}
+   422→   422→                                          data-state="closed"
+   423→   423→                                          data-disabled={undefined}
+   424→   424→                                          disabled={undefined}
+   425→   425→                                          aria-disabled={undefined}
+   426→   426→                                          data-orientation="vertical"
+   427→   427→                                          id="radix-_R_2daqindlb_"
+   428→   428→                                          data-slot="accordion-trigger"
+   429→   429→                                          className={"focus-visible:border-ring focus-visible:ring-ring/50 flex flex-..."}
+   430→   430→                                          data-radix-collection-item=""
+   431→   431→                                          onClick={function handleEvent}
+   432→   432→                                          ref={function}
+   433→   433→-                                         fdprocessedid="817b8y"
+   434→   434→                                        >
+   435→   435→                            ...
+   436→   436→                              <div className="rounded-3x...">
+   437→   437→                                <h3>
+   438→   438→                                <p>
+   439→   439→                                <div className="mt-6 flex ...">
+   440→   440→                                  <ConsultCta size="lg">
+   441→   441→                                    <button
+   442→   442→                                      type="button"
+   443→   443→                                      onClick={function onClick}
+   444→   444→                                      className="group relative inline-flex items-center justify-center gap-2 overflow..."
+   445→   445→-                                     fdprocessedid="pyc4fn"
+   446→   446→                                    >
+   447→   447→                                  ...
+   448→   448→                        ...
+   449→   449→                          <motion.div className={undefined} variants={{hidden:{...}, ...}} initial="hidden" ...>
+   450→   450→                            <div className={undefined} style={{opacity:0, ...}} ref={function useMotionRef.useCallback}>
+   451→   451→                              <div className="mt-9 flex ...">
+   452→   452→                                <button
+   453→   453→                                  type="button"
+   454→   454→                                  onClick={function onClick}
+   455→   455→                                  className="group inline-flex h-14 w-full items-center justify-center gap-2 overflow-..."
+   456→   456→-                                 fdprocessedid="eoa3ft"
+   457→   457→                                >
+   458→   458→                                ...
+   459→   459→                      ...
+   460→   460→                ...
+   461→   461→              ...
+   462→   462→
+   463→   463→
+   464→   464→
+   465→   465→    at button (<anonymous>:null:null)
+   466→   466→    at Navbar (src/components/maklin/navbar.tsx:76:9)
+   467→   467→    at Home (src/app/page.tsx:21:7)
+   468→   468→
+   469→   469→## Code Frame
+   470→   470→  74 |         </div>
+   471→   471→  75 |
+   472→   472→> 76 |         <button
+   473→   473→     |         ^
+   474→   474→  77 |           type="button"
+   475→   475→  78 |           aria-label="Buka menu"
+   476→   476→  79 |           onClick={() => setOpen(true)}
+   477→   477→
+   478→   478→Next.js version: 16.1.3 (Turbopack)
+   479→   479→
