@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { db } from "@/lib/db";
+// import { db } from "@/lib/db";
 
 const PHONE_RE = /^[\d+\s\-()]{8,20}$/;
 
@@ -45,20 +45,40 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    const lead = await db.lead.create({
-      data: {
-        name,
-        whatsapp,
-        city,
-        hasLand,
-        investment,
-        packageName,
-        source: "landing-page",
-        status: "new",
-      },
-    });
+    const response = await fetch(
+  "https://script.google.com/macros/s/AKfycbxSvaI8VvlWg2Qn0Sd6zEMTlUU-tKUzYLFPdGNMBM1A9BAiVgU3kU0pUMbb91QtGBE_/exec",
+  {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      name,
+      whatsapp,
+      city,
+      hasLand,
+      investment,
+      packageName,
+      source: "landing-page",
+      createdAt: new Date().toISOString(),
+    }),
+  }
+);
 
-    return NextResponse.json({ ok: true, id: lead.id });
+if (!response.ok) {
+  throw new Error("Gagal mengirim data ke Google Sheet");
+}
+
+if (!response.ok) {
+  throw new Error("Gagal mengirim data ke Google Sheet");
+}
+
+return NextResponse.json({
+  ok: true,
+  message: "Lead berhasil dikirim",
+});
+
+
   } catch (err) {
     console.error("[LEAD_API_ERROR]", err);
     return NextResponse.json(
