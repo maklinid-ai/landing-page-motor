@@ -16,7 +16,7 @@ export function Footer() {
           <div>
             <Logo tone="light" />
             <p className="mt-4 max-w-xs text-pretty text-sm leading-relaxed text-white/60">
-              Konsultan Bisnis Cuci Motor & Salon Motor. Kami membantu investor
+              Layanan Bisnis Cuci Motor & Salon Motor. Kami membantu investor
               membangun bisnis dari nol hingga siap menghasilkan.
             </p>
             <p className="mt-4 text-xs font-semibold uppercase tracking-[0.18em] text-brand">

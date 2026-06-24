@@ -58,7 +58,7 @@ export function HeroSection() {
             >
               <span className="inline-flex items-center gap-2 rounded-full bg-white/5 px-3.5 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-brand ring-1 ring-inset ring-white/15 backdrop-blur">
                 <Sparkles className="size-3.5" />
-                Konsultan Bisnis Cuci Motor
+                Layanan Bisnis Cuci Motor
               </span>
             </motion.div>
 

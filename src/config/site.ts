@@ -2,7 +2,7 @@ export const site = {
   name: "MAKLIN",
   tagline: "Build • Operate • Grow",
   description:
-    "Konsultan Bisnis Cuci Motor & Salon Motor. Kami membantu investor membangun bisnis cuci motor dari nol hingga siap beroperasi.",
+    "Layanan Bisnis Cuci Motor & Salon Motor. Kami membantu investor membangun bisnis cuci motor dari nol hingga siap beroperasi.",
   whatsappNumber: "6285793676315",
   whatsappDisplay: "+62 857-9367-6315",
   email: "halo@maklin.id",

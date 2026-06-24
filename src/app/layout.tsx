@@ -10,7 +10,7 @@ const geistSans = Geist({
 });
 
 export const metadata: Metadata = {
-  title: "Maklin - Konsultan Bisnis Cuci Motor & Salon Motor",
+  title: "MAKLIN - Bisnis Cuci Motor & Salon Motor",
   description:
     "Bangun bisnis cuci motor yang siap menghasilkan bersama Maklin. Studi kelayakan, setup outlet, SOP, SDM, hingga pendampingan operasional.",
   keywords: [
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     canonical: "https://maklin.id",
   },
   openGraph: {
-    title: "Maklin - Konsultan Bisnis Cuci Motor & Salon Motor",
+    title: "MAKLIN  Bisnis Cuci Motor & Salon Motor",
     description:
       "Bangun bisnis cuci motor yang siap menghasilkan bersama Maklin. Studi kelayakan, setup outlet, SOP, SDM, hingga pendampingan operasional.",
     url: "https://maklin.id",
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Maklin - Konsultan Bisnis Cuci Motor & Salon Motor",
+    title: "MAKLIN Bisnis Cuci Motor & Salon Motor",
     description:
       "Bangun bisnis cuci motor yang siap menghasilkan bersama Maklin.",
   },
