@@ -4,6 +4,26 @@ import { motion, useReducedMotion, type Variants } from "framer-motion";
 import * as React from "react";
 import { cn } from "@/lib/utils";
 
+/**
+ * SSR-safe reduced-motion hook.
+ *
+ * `useReducedMotion()` from Framer Motion returns `null` on the server (no
+ * access to `matchMedia`) but the actual boolean on the client. When a user
+ * has `prefers-reduced-motion: reduce` enabled, this causes a hydration
+ * mismatch: the server renders with motion enabled (y offset applied) while
+ * the client renders with motion reduced (no y offset).
+ *
+ * This hook returns `false` on both the server AND the first client render
+ * (hydration), then updates to the real preference after mount. This
+ * guarantees the initial rendered output is identical on both sides.
+ */
+function useReducedMotionSafe(): boolean {
+  const [mounted, setMounted] = React.useState(false);
+  const reduce = useReducedMotion();
+  React.useEffect(() => setMounted(true), []);
+  return mounted ? Boolean(reduce) : false;
+}
+
 type RevealProps = {
   children: React.ReactNode;
   className?: string;
@@ -24,7 +44,7 @@ export function Reveal({
   once = true,
   as = "div",
 }: RevealProps) {
-  const reduce = useReducedMotion();
+  const reduce = useReducedMotionSafe();
   const MotionTag = motion[as];
 
   const variants: Variants = {
@@ -47,6 +67,7 @@ export function Reveal({
       initial="hidden"
       whileInView="visible"
       viewport={{ once, margin: "-80px" }}
+      suppressHydrationWarning
     >
       {children}
     </MotionTag>
@@ -68,13 +89,14 @@ export function StaggerGroup({
   stagger?: number;
   once?: boolean;
 }) {
-  const reduce = useReducedMotion();
+  const reduce = useReducedMotionSafe();
   return (
     <motion.div
       className={className}
       initial="hidden"
       whileInView="visible"
       viewport={{ once, margin: "-60px" }}
+      suppressHydrationWarning
       variants={{
         hidden: {},
         visible: {
@@ -96,10 +118,11 @@ export function StaggerItem({
   className?: string;
   y?: number;
 }) {
-  const reduce = useReducedMotion();
+  const reduce = useReducedMotionSafe();
   return (
     <motion.div
       className={className}
+      suppressHydrationWarning
       variants={{
         hidden: { opacity: 0, y: reduce ? 0 : y },
         visible: {
@@ -123,13 +146,14 @@ export function FadeIn({
   className?: string;
   delay?: number;
 }) {
-  const reduce = useReducedMotion();
+  const reduce = useReducedMotionSafe();
   return (
     <motion.div
       className={className}
       initial={{ opacity: 0 }}
       animate={{ opacity: reduce ? 1 : 0 }}
       transition={{ duration: 0.8, delay }}
+      suppressHydrationWarning
     >
       {children}
     </motion.div>
@@ -154,7 +178,7 @@ export function CountUp({
 }) {
   const ref = React.useRef<HTMLSpanElement>(null);
   const [value, setValue] = React.useState(0);
-  const reduce = useReducedMotion();
+  const reduce = useReducedMotionSafe();
   const started = React.useRef(false);
 
   React.useEffect(() => {
@@ -187,7 +211,7 @@ export function CountUp({
   }, [to, duration, reduce]);
 
   return (
-    <span ref={ref} className={cn("tabular-nums", className)}>
+    <span ref={ref} className={cn("tabular-nums", className)} suppressHydrationWarning>
       {prefix}
       {value.toLocaleString("id-ID", {
         minimumFractionDigits: decimals,

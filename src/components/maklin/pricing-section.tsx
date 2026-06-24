@@ -131,6 +131,7 @@ export function PricingSection() {
           viewport={{ once: true }}
           transition={{ delay: 0.2 }}
           className="mt-10 text-center text-sm text-muted-foreground"
+          suppressHydrationWarning
         >
           Semua paket sudah termasuk{" "}
           <span className="font-semibold text-ink">studi kelayakan & setup outlet</span>.

@@ -32,6 +32,7 @@ export function FloatingWhatsApp() {
           exit={{ opacity: 0, y: 24, scale: 0.9 }}
           transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
           className="fixed bottom-5 right-4 z-50 flex flex-col items-end gap-3 sm:bottom-6 sm:right-6"
+          suppressHydrationWarning
         >
           {/* Pulse ring */}
           <a
@@ -58,6 +59,7 @@ export function FloatingWhatsApp() {
                     exit={{ width: 0, opacity: 0, marginLeft: 0 }}
                     transition={{ duration: 0.25 }}
                     className="overflow-hidden whitespace-nowrap text-sm font-bold"
+                    suppressHydrationWarning
                   >
                     Konsultasi Gratis
                   </motion.span>

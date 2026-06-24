@@ -85,6 +85,7 @@ export function ProfitSimulationSection() {
               exit={{ opacity: 0, y: -16 }}
               transition={{ duration: 0.35 }}
               className="rounded-3xl border border-ink/10 bg-white p-6 shadow-premium sm:p-8"
+              suppressHydrationWarning
             >
               <div className="flex items-center justify-between">
                 <span className="inline-flex items-center gap-2 rounded-full bg-brand/20 px-3 py-1 text-xs font-bold uppercase tracking-wider text-ink">
@@ -166,6 +167,7 @@ export function ProfitSimulationSection() {
               exit={{ opacity: 0, y: -16 }}
               transition={{ duration: 0.35 }}
               className="rounded-3xl border border-ink/10 bg-ink p-6 text-white shadow-premium sm:p-8"
+              suppressHydrationWarning
             >
               <div className="flex items-center justify-between">
                 <div>
@@ -231,6 +233,7 @@ export function ProfitSimulationSection() {
                                 ? "bg-brand"
                                 : "bg-brand/40",
                             )}
+                            suppressHydrationWarning
                           />
                           {/* investasi baseline indicator */}
                           <div

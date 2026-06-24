@@ -36,6 +36,7 @@ export function Navbar() {
           "mx-auto flex h-16 max-w-7xl items-center justify-between gap-4 px-4 transition-all duration-300 sm:px-6 lg:h-[72px] lg:px-8",
           scrolled ? "mt-0 lg:mt-2" : "mt-0",
         )}
+        suppressHydrationWarning
       >
         <div
           className={cn(
@@ -90,6 +91,7 @@ export function Navbar() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             className="fixed inset-0 z-50 lg:hidden"
+            suppressHydrationWarning
           >
             <div
               className="absolute inset-0 bg-ink/40 backdrop-blur-sm"
@@ -101,6 +103,7 @@ export function Navbar() {
               exit={{ x: "100%" }}
               transition={{ type: "spring", damping: 30, stiffness: 300 }}
               className="absolute right-0 top-0 flex h-full w-[82%] max-w-sm flex-col bg-white p-6 shadow-2xl"
+              suppressHydrationWarning
             >
               <div className="flex items-center justify-between">
                 <Logo />

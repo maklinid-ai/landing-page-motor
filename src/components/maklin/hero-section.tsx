@@ -54,6 +54,7 @@ export function HeroSection() {
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
+              suppressHydrationWarning
             >
               <span className="inline-flex items-center gap-2 rounded-full bg-white/5 px-3.5 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-brand ring-1 ring-inset ring-white/15 backdrop-blur">
                 <Sparkles className="size-3.5" />
@@ -66,6 +67,7 @@ export function HeroSection() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.05 }}
               className="mt-6 text-balance text-4xl font-bold leading-[1.05] tracking-tight sm:text-5xl md:text-6xl lg:text-[64px]"
+              suppressHydrationWarning
             >
               Punya Modal atau{" "}
               <span className="relative whitespace-nowrap">
@@ -92,6 +94,7 @@ export function HeroSection() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.12 }}
               className="mt-7 max-w-xl text-pretty text-lg leading-relaxed text-white/80 sm:text-xl"
+              suppressHydrationWarning
             >
               Bangun Bisnis Cuci Motor yang Siap Menghasilkan Bersama{" "}
               <span className="font-semibold text-white">MAKLIN</span>
@@ -102,6 +105,7 @@ export function HeroSection() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.18 }}
               className="mt-4 max-w-xl text-pretty text-base leading-relaxed text-white/60"
+              suppressHydrationWarning
             >
               Kami membantu investor membangun bisnis cuci motor dari nol hingga
               siap beroperasi — lengkap dengan studi kelayakan, setup outlet,
@@ -113,6 +117,7 @@ export function HeroSection() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.24 }}
               className="mt-8 flex w-full flex-col gap-3 sm:w-auto sm:flex-row"
+              suppressHydrationWarning
             >
               <ConsultCta size="lg" className="w-full sm:w-auto">
                 Konsultasi Gratis
@@ -133,6 +138,7 @@ export function HeroSection() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.32 }}
               className="mt-12 grid w-full grid-cols-1 gap-3 sm:grid-cols-3"
+              suppressHydrationWarning
             >
               {stats.map((s) => (
                 <div
@@ -163,6 +169,7 @@ export function HeroSection() {
             animate={{ opacity: 1, scale: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
             className="relative mx-auto w-full max-w-md lg:max-w-none"
+            suppressHydrationWarning
           >
             <HeroVisual />
           </motion.div>
@@ -201,6 +208,7 @@ function HeroVisual() {
               animate={{ height: `${h}%` }}
               transition={{ duration: 0.7, delay: 0.5 + i * 0.06, ease: "easeOut" }}
               className="flex-1 rounded-t-md bg-gradient-to-t from-brand/40 to-brand"
+              suppressHydrationWarning
             />
           ))}
         </div>

@@ -176,6 +176,7 @@ export function LeadFormDialog() {
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
                     className="px-6 py-8 text-center"
+                    suppressHydrationWarning
                   >
                     <motion.div
                       initial={{ scale: 0.6, opacity: 0 }}
@@ -186,6 +187,7 @@ export function LeadFormDialog() {
                         stiffness: 200,
                       }}
                       className="mx-auto inline-flex size-16 items-center justify-center rounded-full bg-brand text-ink"
+                      suppressHydrationWarning
                     >
                       <CheckCircle2 className="size-9" />
                     </motion.div>
@@ -222,6 +224,7 @@ export function LeadFormDialog() {
                     exit={{ opacity: 0 }}
                     onSubmit={handleSubmit}
                     className="space-y-5 px-6 py-6"
+                    suppressHydrationWarning
                   >
                     <Field label="Nama" htmlFor="lead-name" required>
                       <Input

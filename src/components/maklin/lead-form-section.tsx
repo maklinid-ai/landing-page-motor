@@ -203,6 +203,7 @@ export function LeadFormSection() {
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
                     className="px-6 py-12 text-center sm:px-10"
+                    suppressHydrationWarning
                   >
                     <motion.div
                       initial={{ scale: 0.6, opacity: 0 }}
@@ -213,6 +214,7 @@ export function LeadFormSection() {
                         stiffness: 200,
                       }}
                       className="mx-auto inline-flex size-16 items-center justify-center rounded-full bg-brand text-ink"
+                      suppressHydrationWarning
                     >
                       <CheckCircle2 className="size-9" />
                     </motion.div>
@@ -242,6 +244,7 @@ export function LeadFormSection() {
                     exit={{ opacity: 0 }}
                     onSubmit={handleSubmit}
                     className="relative space-y-5 px-6 py-7 sm:px-8"
+                    suppressHydrationWarning
                   >
                     <div>
                       <h3 className="text-xl font-bold text-ink">
