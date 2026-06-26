@@ -130,7 +130,7 @@ export function PhoneLink({ className }: { className?: string }) {
       )}
     >
       <Phone className="size-4 text-brand" />
-      <span className="tabular-nums">+62 857-9367-6315</span>
+      <span className="tabular-nums">+62 819-7394-0566</span>
     </a>
   );
 }

@@ -40,10 +40,45 @@ export function Footer() {
                 <Mail className="size-4 text-brand" />
                 {site.email}
               </a>
-              <span className="inline-flex items-center gap-2 text-white/70">
-                <MapPin className="size-4 text-brand" />
-                Indonesia
-              </span>
+              <div className="space-y-3 text-sm text-white/70">
+                <div className="inline-flex items-start gap-2">
+                  <MapPin className="size-4 text-brand mt-1" />
+                  <div>
+                    <p className="font-semibold">Kantor Pusat</p>
+                    <a
+                      href="https://maps.app.goo.gl/y48PD4mqsiuEQexZ6"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="transition-colors hover:text-brand"
+                    >
+                      Jl. Cilangkap Raya RT 05/04, Cilangkap, Kec. Cipayung, Jakarta Timur
+                    </a>
+                  </div>
+                </div>
+
+                <div className="inline-flex items-start gap-2">
+                  <span className="min-w-[1rem]" />
+                  <div>
+                    <p className="font-semibold">Kantor Cabang</p>
+                    <a
+                      href="https://maps.app.goo.gl/v28BNR68jNTw3rjLA"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block transition-colors hover:text-brand"
+                    >
+                      Jl. Taman Pahlawan 96, Purwamekar, Purwakarta
+                    </a>
+                    <a
+                      href="https://maps.app.goo.gl/hgiUvmLHy87XEGzU6"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block transition-colors hover:text-brand"
+                    >
+                      Jl. Bahagia Raya 18, Abadijaya, Sukmajaya, Depok
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
