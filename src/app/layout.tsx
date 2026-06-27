@@ -24,6 +24,11 @@ export const metadata: Metadata = {
     "studi kelayakan bisnis",
   ],
   authors: [{ name: "MAKLIN" }],
+  icons: {
+    icon: "/logo-web-maklin.png",
+    shortcut: "/logo-web-maklin.png",
+    apple: "/logo-web-maklin.png",
+  },
   metadataBase: new URL("https://maklin.id"),
   alternates: {
     canonical: "https://maklin.id",
