@@ -1,10 +1,11 @@
+// Touch file to force rebuild: updated cache refresh
 export const site = {
   name: "MAKLIN",
   tagline: "Build • Operate • Grow",
   description:
     "Layanan Bisnis Cuci Motor & Salon Motor. Kami membantu investor membangun bisnis cuci motor dari nol hingga siap beroperasi.",
-  whatsappNumber: "6285793676315",
-  whatsappDisplay: "+62 857-9367-6315",
+  whatsappNumber: "6281973940566",
+  whatsappDisplay: "+62 819-7394-0566",
   email: "halo@maklin.id",
   domain: "maklin.id",
   url: "https://maklin.id",
