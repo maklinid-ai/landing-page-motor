@@ -4,7 +4,6 @@ import * as React from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { navLinks, waLink } from "@/config/site";
-import { Logo } from "./logo";
 import { ConsultCta } from "./cta";
 import { cn } from "@/lib/utils";
 
@@ -47,7 +46,11 @@ export function Navbar() {
           )}
         />
         <a href="#top" className="flex items-center" aria-label="MAKLIN beranda">
-          <Logo />
+          <img
+            src="/logo-konsultan-motor.png"
+            alt="MAKLIN"
+            className="h-12 w-auto object-contain"
+          />
         </a>
 
         <nav className="hidden items-center gap-1 lg:flex">
@@ -106,7 +109,11 @@ export function Navbar() {
               suppressHydrationWarning
             >
               <div className="flex items-center justify-between">
-                <Logo />
+                <img
+                  src="/logo-konsultan-motor.png"
+                  alt="MAKLIN"
+                  className="h-12 w-auto object-contain"
+                />
                 <button
                   type="button"
                   aria-label="Tutup menu"
